@@ -1,0 +1,26 @@
+version: '1.0'
+name: 'tp01'
+services:
+  web:
+    build: './build/php'
+    ports:
+      - '80:80'
+    volumes:
+      - C:/dwwm24/dev/php/TP01_first_true_form/app:/var/www/html
+    links:
+      - db:db
+  db:
+    build: './build/mysql'
+    volumes:
+      - C:/Users/Stagiaire/.docker/mysql:/var/lib/msql
+    ports:
+      - '3306:3306'
+    environment:
+      - MYSQL_ROOT_PASSWORD=mybigpassword
+  myadmin:
+    image: phpmyadmin/phpmyadmin
+    ports:
+      - '8080:80'
+    links:
+      - db:db
+    
