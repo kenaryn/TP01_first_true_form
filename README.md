@@ -12,6 +12,6 @@
 
 ### Side notes
 
-- Exporting utiliarian functiones
+- Exporting utiliarian functions
 - Commenting all functions
 - Writing in procedural mode when object oriented seems useless or clumsy/cumbersome to benefit from more memory-efficient data structures.
