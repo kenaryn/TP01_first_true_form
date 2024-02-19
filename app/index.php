@@ -1,9 +1,6 @@
 <?php
 declare(strict_types=1);
 include_once './header.php';
-
-// Controller
-// END - Controller
 ?>
 
 <main>
@@ -22,7 +19,7 @@ include_once './header.php';
   <input type="text" id="identifier" name="identifier" placeholder="Identifier"><br>
   <label for="password">Password: </label>
   <input type="password" id="password" name="password" placeholder="password" minlength="6"><br>
-  Sex: 
+  <label>Sex: </label>
   <input type="radio" id="male" name="sex" value="male" checked>
   <label for="male">Male</label>
   <input type="radio" id="female" name="sex" value="female">

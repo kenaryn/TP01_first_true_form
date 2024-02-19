@@ -8,6 +8,11 @@ form {
   padding: 0.2rem;
 }
 
+form > label {
+  display: inline-block;
+  width: 5rem;
+}
+
 form > input {
   border-radius: 0.4rem;
 }
