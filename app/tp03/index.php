@@ -48,14 +48,94 @@ foreach ($arr2 as $key => $val) {
 $ranks = [0, 1, 2, 3, 4, 5, 6, 6.5];
 $sum = calc_sum($ranks);
 $average = calc_average($ranks);
-$std_deviation = calc_std_deviation($average);
+$std_deviation = calc_standard_deviation($average, $ranks);
 ?>
 
 <article class="results">
   <p>Sum: <?=$sum?></p>
   <p>Average: <?=$average?></p>
-  <p>Standard deviation: <?=std_deviation?></p>
+  <p>Standard deviation: <?=$std_deviation?></p>
 </article>
+
+<?php
+$movies = [
+  'collection_name' => 'movies',
+  'data' => ['
+    The Shawshank Redemption', 'The Godfather', 'The Dark Knight', 'The Lord of the Rings: The return of the king', 'Pulp Fiction'
+  ]
+];
+
+$db_movies = [
+  // 'collection_name' => 'movies',
+  // 'data' => [
+    'The Shawshank Redemption' => ['filmmaker' => 'Frank Darabont', 'year' => 1994, 'scoring' => 9.2],
+    'The Godfather' => ['filmmaker' => 'Francis Ford Coppola', 'year' => 1972, 'scoring' => 9.1],
+    'The Dark Knight' => ['filmmaker' => 'Christopher Nolan', 'year' => 2008, 'scoring' => 9.0],
+    'The Lord of the Rings: The return of the king' => ['filmmaker' => 'Peter Jackson', 'year' => 2003, 'scoring' => 8.9],
+    'Pulp Fiction' => ['filmmaker' => 'Quentin Tarantino', 'year' => 1994, 'scoring' => 8.9],
+  // ]
+];
+?>
+
+<!-- ex 5 -->
+<h3>DB movies</h3>
+
+<ul>
+<?php
+foreach ($db_movies as $key => $value) {
+  ?>
+  <li><strong><?=$key?></strong><ul>
+  <?php
+  foreach ($value as $k => $v) {
+    ?>
+    <li><?=$k?>: <?=$v?></li>
+    <?php
+  }
+  ?>
+  </ul>
+<?php
+}
+?>
+</ul>
+
+<?php
+print_arr_values($movies);
+
+$eleanor = [
+  'collection_name' =>'eleanor',
+  'data' => [
+    'fname' => 'Eleanor',
+    'lname' => 'of Aquitain',
+    'age' => 24,
+    'nationality' => 'french'
+  ]
+];
+
+$aurele = [
+  'collection_name' => 'aurele',
+  'data' => [
+    'fname' => 'Aurele',
+    'lname' => 'plazz',
+    'age' => 39,
+    'nationality' => 'aerynth'
+  ]
+];
+
+$muammar = [
+  'collection_name' => 'muammar',
+  'data' => [
+    'fname' => 'muammar',
+    'lname' => 'al-Qaddafi',
+    'age' => 69,
+    'nationality' => 'libya'
+  ]
+];
+
+$individuals = [$eleanor, $aurele, $muammar];
+
+print_collection($individuals);
+?>
+
 </main>
 
 <?php
