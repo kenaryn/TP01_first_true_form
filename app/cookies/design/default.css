@@ -1,0 +1,45 @@
+body {
+  background-color: bisque;
+  font: small 'Lucida Bright', monospace;
+}
+
+form {
+  margin: 0.3rem 0.7rem;
+  padding: 0.2rem;
+}
+
+form > label:not(.radio-btn) {
+  display: inline-block;
+  width: 5rem;
+}
+
+form > input {
+  border-radius: 0.4rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+article.feed {
+  display: flex;
+  flex-flow: column nowrap;
+  max-width: 50%;
+}
+article.feed > p {
+  margin-top: 0.5rem;
+  padding: 0.3rem 0.7rem;
+  background-color: rgb(66, 214, 214);
+  color: rgb(39, 13, 13);
+  border: thin solid black;
+  border-left: thick solid rgb(8, 8, 164);
+  border-radius: 0 0.5rem 0.5rem 0;
+}
+
+form {
+  max-width: 40%;
+}
+
+form fieldset {
+  border-radius: 0.4rem;
+}
