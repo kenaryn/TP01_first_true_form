@@ -6,13 +6,13 @@ services:
     ports:
       - '80:80'
     volumes:
-      - C:/dwwm24/dev/php/TP01_first_true_form/app:/var/www/html
+      - ~/dev/php/TP01_first_true_form/app:/var/www/html
     links:
       - db:db
   db:
     build: './build/mysql'
     volumes:
-      - C:/Users/Stagiaire/.docker/mysql:/var/lib/msql
+      - ~/.docker/mysql:/var/lib/msql
     ports:
       - '3306:3306'
     environment:

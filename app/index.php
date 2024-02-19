@@ -21,9 +21,9 @@ include_once './header.php';
   <input type="password" id="password" name="password" placeholder="password" minlength="6"><br>
   <label>Sex: </label>
   <input type="radio" id="male" name="sex" value="male" checked>
-  <label for="male">Male</label>
+  <label for="male" class="radio-btn">Male</label>
   <input type="radio" id="female" name="sex" value="female">
-  <label for="female">female</label><br>
+  <label for="female" class="radio-btn">female</label><br>
   <label for="php-beginner">Php beginner</label>
   <input type="checkbox" id="php-beginner" name="php-beginner" checked><br>
 
